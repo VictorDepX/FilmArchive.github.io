@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo de Filmes - Cine Archive</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <script src="./JS/index.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="./imgs/Logo.png" alt="Logo Cine Archive">
+        </div>
+        <h1>Cine Archive - Acervo de Filmes</h1>
+        <nav>
+            <ul>
+                <li><button class="nav-btn">Home</button></li>
+                <li><button id="btn-login" class="nav-btn">Login</button></li>
+                <li><button id="btn-sobre-nos" class="nav-btn">Sobre nós</button></li>
+            </ul>
+        </nav>
+        <!-- Div para exibir a mensagem de boas-vindas -->
+        <div id="welcome-message" class="welcome-message"></div>
+    </header>
+
+    <main>
+        <!-- Seção de pesquisa de filmes -->
+        <section id="pesquisa">
+            <h2>Pesquisar Títulos de Filmes</h2>
+            <form id="form-pesquisa">
+                <input type="text" id="titulo" placeholder="Digite o título do filme">
+                <button type="button" id="btn-pesquisar">Pesquisar</button>
+            </form>
+        </section>
+
+        <!-- Seção de destaques -->
+        <section id="destaques">
+            <h2>Destaques</h2>
+            <div id="movies-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cine Archive - Acervo de Filmes</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./JS/shared.js"></script>
+    <script>
+        // Função para verificar se o usuário está logado e exibir a mensagem de boas-vindas
+        function checkLoggedInUser() {
+            var username = localStorage.getItem('username');
+            if (username) {
+                // Define o elemento de boas-vindas como visível
+                document.getElementById('welcome-message').style.display = 'block';
+                // Define o texto de boas-vindas com o nome do usuário
+                document.getElementById('welcome-message').textContent = 'Bem-vindo, ' + username;
+            } else {
+                // Se não houver nome de usuário armazenado, mantém o elemento de boas-vindas oculto
+                document.getElementById('welcome-message').style.display = 'none';
+            }
+        }
+
+        // Adiciona evento de clique ao botão "Login"
+        document.getElementById('btn-login').addEventListener('click', function () {
+            // Redireciona para a página de login
+            window.location.href = 'login.html';
+        });
+
+        // Adiciona evento de clique ao botão "Pesquisar"
+        document.getElementById('btn-pesquisar').addEventListener('click', function () {
+            localStorage.setItem('titulo', document.getElementById('titulo').value);
+            var titulo = document.getElementById('titulo').value.trim();
+            if (titulo !== '') {
+                // Redireciona para a página de resultados
+                window.location.href = 'resultados.html';
+            }
+        });
+
+        // Adiciona evento de clique ao botão "Sobre nós"
+        document.getElementById('btn-sobre-nos').addEventListener('click', function () {
+            // Redireciona para a página "Sobre nós"
+            window.location.href = 'about.html';
+        });
+
+        // Verifica se o usuário está logado ao carregar a página
+        checkLoggedInUser();
+    </script>
+
+</body>
+
+</html>

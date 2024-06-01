@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da Pesquisa - Cine Archive</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cine Archive - Resultados da Pesquisa</h1>
+        <nav>
+            <ul>
+                <li><button id="btn-home" class="nav-btn">Home</button></li>
+                <li><button class="nav-btn">Login</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção de resultados da pesquisa de filmes -->
+        <section id="resultados">
+            <h2>Resultados da Pesquisa</h2>
+            <!-- Aqui seriam exibidos os resultados da pesquisa -->
+            <div id="search-results"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cine Archive - Resultados da Pesquisa</p>
+    </footer>
+
+    <script>
+        // Adiciona evento de clique ao botão "Home"
+        document.getElementById('btn-home').addEventListener('click', function() {
+            // Redireciona para a página inicial
+            window.location.href = 'index.html';
+        });
+    </script>
+    <!-- O link para o script da pagina -->
+    <script src="./JS/resultados.js"></script>
+    <script src="./JS/shared.js"></script>
+
+</body>
+</html>

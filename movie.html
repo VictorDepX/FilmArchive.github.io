@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo de Filmes - Cine Archive</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Cine Archive - Acervo de Filmes</h1>
+        <nav>
+            <ul>
+                <li><button id="btn-home" class="nav-btn">Home</button></li>
+                <li><button id="btn-login" class="nav-btn">Login</button></li>
+                <li><button id="btn-sobre-nos" class="nav-btn">Sobre nós</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="movie-info">
+            <img id="poster" src="" alt="Poster do filme">
+            <div class="info">
+                <h1 id="title"></h1>
+                <div id="duration"></div>
+                <div id="rating-age"></div>
+                <ul id="genres-list"></ul>
+                <strong>
+                    <p id="rating"></p>
+                </strong>
+                <p id="synopsis"></p>
+            </div>
+        </div>
+        <div class="comments">
+            <h1>Comentários</h1>
+            <ul id="comments-list"></ul>
+            <form id="comment-form">
+                <label for="content">Comentário:</label>
+                <textarea id="content" name="content"></textarea><br><br>
+                <label for="rating">Sua nota:</label>
+                <input type="number" id="user-rating" name="user-rating" min="0" max="10" required>
+                <input type="submit" value="Adicionar Comentário">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cine Archive - Acervo de Filmes</p>
+    </footer>
+
+    <script>
+        // Adiciona evento de clique ao botão "Login"
+        document.getElementById('btn-login').addEventListener('click', function () {
+            // Redireciona para a página de login
+            window.location.href = 'login.html';
+        });
+
+        // Adiciona evento de clique ao botão "Home"
+        document.getElementById('btn-home').addEventListener('click', function () {
+            // Redireciona para a página inicial
+            window.location.href = 'index.html';
+        });
+
+        // Adiciona evento de clique ao botão "Sobre nós"
+        document.getElementById('btn-sobre-nos').addEventListener('click', function () {
+            // Redireciona para a página "Sobre nós"
+            window.location.href = 'about.html';
+        });
+
+        // Verifica se o usuário está logado ao carregar a página
+        checkLoggedInUser();
+    </script>
+    <script src="./JS/movie.js"></script>
+
+</body>
+
+</html>

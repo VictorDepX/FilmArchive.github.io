@@ -1,0 +1,387 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+header h1 {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+.nav-btn {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #777;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 18px;
+}
+
+/* Estilos específicos par a seção de login */
+.login,
+.registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.login h1,
+.registro h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: normal;
+    color: #333;
+}
+
+.login input,
+.registro input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.login button,
+.registro button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login button:hover,
+.registro button:hover {
+    background-color: #777;
+}
+
+/* Estilos específicos para a seção de pesquisa */
+#form-pesquisa {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#form-pesquisa input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+}
+
+#form-pesquisa button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form-pesquisa button:hover {
+    background-color: #777;
+}
+
+/* Estilos específicos para seção de resultados */
+#search-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#search-results div {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#search-results div img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+#search-results div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Remover sublinhado na seção de resultados */
+#search-results a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+#search-results a:hover {
+    text-decoration: none !important;
+    /* Remover sublinhado ao passar o mouse */
+}
+
+/* Estilos específicos para a seção de destaques */
+#movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#movies-container div {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#movies-container div img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+#movies-container div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#movies-container a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+#movies-container a:hover {
+    text-decoration: none !important;
+    /* Remover sublinhado ao passar o mouse */
+}
+
+#btn-ver-mais {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn-ver-mais:hover {
+    background-color: #777;
+}
+
+/* Estilos específicos para a seção de detalhes(movies) */
+.movie-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.movie-info img {
+    width: 450px;
+    height: 750px;
+    margin-right: 20px;
+    border-radius: 5%;
+}
+
+.info {
+    flex-basis: 70%;
+}
+
+.info h1 {
+    margin-top: 0;
+}
+
+.info div,
+.info ul,
+.info p {
+    margin-bottom: 1rem;
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.comments h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.comments ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comments li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.comments li strong {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.comments li p {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+}
+
+.comments form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+
+.comments form label {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.comments form textarea,
+.comments form input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.comments form input[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comments form input[type="submit"]:hover {
+    background-color: #444;
+}
+
+/* Estilos específicos para a seção Sobre nós */
+#sobre-nos {
+    text-align: left;
+}
+
+#sobre-nos p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
