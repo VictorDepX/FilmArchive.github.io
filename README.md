@@ -46,11 +46,15 @@ Você pode acessar o projeto online através do GitHub Pages:
 
 ## 🔧 Como Rodar o Projeto Localmente
 
-1. Clone este repositório: git clone https://github.com/seu-username/FilmArchive.git
+1. Clone este repositório:
+
+git clone https://github.com/seu-username/MovieReviewApp.git
    
-3. Navegue até o diretório do projeto: cd FilmArchive
+2. Navegue até o diretório do projeto:
+
+cd MovieReviewApp
   
-5. Abra o arquivo `index.html` no seu navegador preferido.
+3. Abra o arquivo `index.html` no seu navegador preferido.
 
 ## 📄 Licença
 
