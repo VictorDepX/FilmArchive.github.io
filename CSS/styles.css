@@ -295,6 +295,13 @@ section p {
     margin-bottom: 1rem;
 }
 
+.trailer {
+    width: 640px;
+    height: 360px;
+    flex: 1;
+    margin-right: 20px;
+}
+
 .comments {
     margin-top: 20px;
 }
